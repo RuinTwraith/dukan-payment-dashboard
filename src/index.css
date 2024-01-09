@@ -1,13 +1,58 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --black-1: #000;
+    --black-12: #1a181e;
+    --black-30: #4d4d4d;
+    --black-50: #808080;
+    --black-60: #999;
+    --black-85: #d9d9d9;
+    --black-90: #e6e6e6;
+    --black-95: #f2f2f2;
+    --black-98: #fafafa;
+    --black-100: #fff;
+
+    --primary-blue: #146eb4;
+    --secondary-navbar: #1e2640;
+  }
+  html body {
+    color: var(--black-12);
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer utilities {
+  .caption-regular {
+    @apply text-xs font-normal;
+  }
+  .sub-body-regular {
+    @apply text-[13px] leading-4 font-normal;
+  }
+  .body-1-regular {
+    @apply text-[15px] font-normal leading-[22px];
+  }
+  .body-1-medium {
+    @apply text-[15px] font-medium leading-[22px];
+  }
+  .body-2-regular {
+    @apply text-sm font-normal;
+  }
+  .body-2-medium {
+    @apply text-sm font-medium;
+  }
+  .sub-title-regular {
+    @apply text-base font-normal;
+  }
+  .sub-title-medium {
+    @apply text-base font-medium;
+  }
+  .heading-medium {
+    @apply text-xl font-medium;
+  }
+  .pagination-number {
+    @apply w-7 h-7 rounded cursor-pointer body-2-regular flex justify-center items-center;
+  }
 }

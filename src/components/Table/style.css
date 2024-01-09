@@ -1,0 +1,17 @@
+td {
+  padding: 0;
+}
+
+td:not(:first-child, :last-child) > .row {
+  padding: 14px 12px;
+}
+
+td:first-child > .row {
+  padding: 14px 12px 14px 0;
+  margin-left: 12px;
+}
+
+td:last-child > .row {
+  padding: 14px 0 14px 12px;
+  margin-right: 12px;
+}
